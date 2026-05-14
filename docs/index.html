@@ -20,13 +20,13 @@
 
         .container {
             text-align: center;
+            transform: scale(1.25);
         }
 
-        /* glow effect behind logo */
         .logo-wrapper {
             position: relative;
             display: inline-block;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .logo-glow {
@@ -34,48 +34,48 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 420px;
-            height: 420px;
+            width: 600px;
+            height: 600px;
             background: radial-gradient(circle, rgba(0,140,255,0.25), transparent 60%);
-            filter: blur(20px);
+            filter: blur(25px);
             z-index: 0;
         }
 
         .logo {
-            width: 320px;
+            width: 420px;
             position: relative;
             z-index: 1;
-            filter: drop-shadow(0 0 20px rgba(0,140,255,0.4));
+            filter: drop-shadow(0 0 25px rgba(0,140,255,0.5));
         }
 
         .title {
-            margin-top: 10px;
-            font-size: 28px;
-            letter-spacing: 4px;
+            margin-top: 15px;
+            font-size: 40px;
+            letter-spacing: 6px;
             color: #cfd8ff;
         }
 
         .search-bar {
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         input {
-            width: 420px;
-            max-width: 80vw;
-            padding: 16px 20px;
-            border-radius: 14px;
+            width: 600px;
+            max-width: 85vw;
+            padding: 22px 26px;
+            border-radius: 18px;
             border: 1px solid rgba(0,140,255,0.4);
-            background: rgba(10, 15, 25, 0.7);
+            background: rgba(10, 15, 25, 0.75);
             color: white;
-            font-size: 16px;
+            font-size: 20px;
             outline: none;
-            box-shadow: 0 0 25px rgba(0,140,255,0.15);
+            box-shadow: 0 0 35px rgba(0,140,255,0.2);
             transition: 0.3s ease;
         }
 
         input:focus {
             border-color: rgba(0,140,255,0.9);
-            box-shadow: 0 0 35px rgba(0,140,255,0.35);
+            box-shadow: 0 0 50px rgba(0,140,255,0.4);
         }
 
         input::placeholder {
@@ -88,7 +88,7 @@
             height: 200%;
             background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
+            background-size: 70px 70px;
             transform: rotate(25deg);
             top: -50%;
             left: -50%;
@@ -106,7 +106,7 @@
 
     <div class="logo-wrapper">
         <div class="logo-glow"></div>
-        <img class="logo" src="/mnt/data/a1019096-07f0-4ea5-8194-70c4fa91a0a5.png" alt="Index47 Logo"/>
+        <img class="logo" src="index47.png" />
     </div>
 
     <div class="title">INDEX47</div>
