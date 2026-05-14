@@ -18,9 +18,23 @@
             overflow: hidden;
         }
 
+        .grid-lines {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 70px 70px;
+            transform: rotate(25deg);
+            top: -50%;
+            left: -50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
         .container {
             text-align: center;
-            transform: scale(0.7142857); /* 1.75x smaller */
+            transform: scale(0.7142857);
             position: relative;
             z-index: 1;
         }
@@ -59,6 +73,7 @@
 
         .search-bar {
             margin-top: 40px;
+            position: relative;
         }
 
         input {
@@ -84,18 +99,33 @@
             color: rgba(180, 190, 255, 0.5);
         }
 
-        .grid-lines {
+        /* 🔥 AUTOCOMPLETE BOX */
+        .suggestions {
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 70px 70px;
-            transform: rotate(25deg);
-            top: -50%;
-            left: -50%;
-            z-index: 0;
-            pointer-events: none;
+            width: 600px;
+            max-width: 85vw;
+            margin-top: 10px;
+            background: rgba(10, 15, 25, 0.92);
+            border: 1px solid rgba(0,140,255,0.25);
+            border-radius: 14px;
+            overflow: hidden;
+            display: none;
+            box-shadow: 0 0 30px rgba(0,140,255,0.15);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .suggestion-item {
+            padding: 14px 16px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 15px;
+            color: rgba(220,230,255,0.85);
+            transition: 0.2s;
+        }
+
+        .suggestion-item:hover {
+            background: rgba(0,140,255,0.15);
         }
     </style>
 </head>
@@ -114,18 +144,67 @@
     <div class="title">INDEX47</div>
 
     <div class="search-bar">
-        <input id="search" type="text" placeholder="Search Index47..." onkeydown="handleSearch(event)" />
+        <input id="search"
+               type="text"
+               placeholder="Search Index47..."
+               oninput="showSuggestions()"
+               onkeydown="handleEnter(event)" />
+
+        <div id="suggestions" class="suggestions"></div>
     </div>
 
 </div>
 
 <script>
-    function handleSearch(event) {
-        if (event.key === "Enter") {
-            const query = document.getElementById("search").value.trim().toLowerCase();
+    const pages = {
+        "opr": {
+            title: "OPR",
+            page: "opr.html",
+            desc: "Offensive Power Rating"
+        }
+    };
 
-            if (query === "opr") {
-                window.location.href = "opr.html";
+    function showSuggestions() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const box = document.getElementById("suggestions");
+
+        box.innerHTML = "";
+
+        if (!input) {
+            box.style.display = "none";
+            return;
+        }
+
+        const matches = Object.keys(pages).filter(key =>
+            key.includes(input) || pages[key].desc.toLowerCase().includes(input)
+        );
+
+        if (matches.length === 0) {
+            box.style.display = "none";
+            return;
+        }
+
+        matches.forEach(match => {
+            const item = document.createElement("div");
+            item.className = "suggestion-item";
+            item.innerText = `${pages[match].title} — ${pages[match].desc}`;
+
+            item.onclick = () => {
+                window.location.href = pages[match].page;
+            };
+
+            box.appendChild(item);
+        });
+
+        box.style.display = "block";
+    }
+
+    function handleEnter(event) {
+        if (event.key === "Enter") {
+            const input = document.getElementById("search").value.toLowerCase();
+
+            if (pages[input]) {
+                window.location.href = pages[input].page;
             }
         }
     }
