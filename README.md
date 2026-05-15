@@ -18,8 +18,9 @@ definitions, or acroynyms. This website simply solves all of these problems!
  9. Please ask questions if confused, do NOT pull request if uncertain
  10. After contributing, you will get a helper role on the discord, your earned it! ;)
 
-<video src="https://github.com/user-attachments/assets/fb531c18-b55e-44ff-8b1f-0498fa883317
-" width="2" controls></video>
+https://github.com/user-attachments/assets/769cd9fc-023f-43be-ad2e-bacbcda5e9d8
+
+
 
 # EMBEDDING LINKS 
  Embedding links can only happen within the text box description, if needed do like so, at any point in the description:
