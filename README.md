@@ -10,9 +10,10 @@ definitions, or acroynyms. This website simply solves all of these problems!
  3. Open the folder to reveal the template
  4. Copy all of template.html and paste it into a new file, name it [Search].html within the docs folder, not contributing
  5. All comments on template are to be adapted to your requested search, remove all instances (except html starter) of all comment tags 
- 6. If links need to be embedded within description, follow guidelines on line 135 and 136
- 7. Please ask questions if confused, do NOT pull request if uncertain
- 8. After contributing, you will get a helper role on the discord, your earned it! ;)
+ 6. If links need to be embedded within description follow embedding links section below
+ 7. Go to the index.html file in the docs folder, go to line 158, and add your topic in the same format as shown
+ 8. Please ask questions if confused, do NOT pull request if uncertain
+ 9. After contributing, you will get a helper role on the discord, your earned it! ;)
 
 ## EMBEDDING LINKS 
  Embedding links can only happen within the text box description, if needed do like so, at any point in the description:
