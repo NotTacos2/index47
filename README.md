@@ -6,7 +6,7 @@ definitions, or acroynyms. This website simply solves all of these problems!
 
 # CONTRIBUTING
  When contributing... determine whether you want to make a new search, or work on exisiting. If exisiting, you can just skip these steps and make a pull request!
-## Watch video at the bottom for a simple demonstration instead of reading all this
+ Watch video at the bottom for a simple demonstration instead of reading all this
  1. Ask a developer if this is an approved topic
  2. Locate the contributing folder of index47
  3. Open the folder to reveal the template
@@ -18,14 +18,16 @@ definitions, or acroynyms. This website simply solves all of these problems!
  9. Please ask questions if confused, do NOT pull request if uncertain
  10. After contributing, you will get a helper role on the discord, your earned it! ;)
 
-## EMBEDDING LINKS 
+<video src="https://github.com/user-attachments/assets/fb531c18-b55e-44ff-8b1f-0498fa883317
+" width="400" controls></video>
+
+# EMBEDDING LINKS 
  Embedding links can only happen within the text box description, if needed do like so, at any point in the description:
  Make sure the second link usage, does not have extra characters, just the base url.
            
             
  <img width="466" height="62" alt="image" src="https://github.com/user-attachments/assets/def1fb60-d108-407e-b7ee-e3504397f70e" />
 
-https://github.com/user-attachments/assets/fb531c18-b55e-44ff-8b1f-0498fa883317
 
 
     
