@@ -15,12 +15,11 @@
         --muted:#9aa4c7;
         --box:rgba(255,255,255,0.04);
         --border:rgba(255,255,255,0.08);
-        --accent:#4f7cff;
         }
 
         body.light{
         --bg1:#edf2ff;
-        --bg2:#fff;
+        --bg2:#ffffff;
         --text:#111827;
         --muted:#5b6480;
         --box:rgba(255,255,255,0.75);
@@ -44,7 +43,9 @@
         .grid{
         position:absolute;
         inset:-50%;
-        background-image:linear-gradient(rgba(255,255,255,.02)1px,transparent1px),linear-gradient(90deg,rgba(255,255,255,.02)1px,transparent1px);
+        background-image:
+        linear-gradient(rgba(255,255,255,.02)1px,transparent1px),
+        linear-gradient(90deg,rgba(255,255,255,.02)1px,transparent1px);
         background-size:120px120px;
         transform:rotate(25deg);
         opacity:.3;
@@ -170,8 +171,11 @@
 <div class="glow" id="glow"></div>
 
 <div class="top">
+
     <button class="btn" onclick="document.body.classList.toggle('light')">◐</button>
+
     <a class="btn" href="https://github.com/index-47/index47" target="_blank">G</a>
+
 </div>
 
 <div class="container">
@@ -179,6 +183,7 @@
     <img src="index.png">
 
     <h1>INDEX47</h1>
+
     <p>Your FTC glossary by team 13100</p>
 
     <div class="search">
@@ -201,20 +206,19 @@
     }
 
     function show(){
-
-    const input=document.getElementById("search").value.toLowerCase()
+    const v=document.getElementById("search").value.toLowerCase()
     const box=document.getElementById("box")
 
     box.innerHTML=""
 
-    if(!input){
+    if(!v){
     box.style.display="none"
     return
     }
 
     const matches=Object.keys(pages).filter(k=>
-    k.includes(input) ||
-    pages[k][1].toLowerCase().includes(input)
+    k.includes(v)||
+    pages[k][1].toLowerCase().includes(v)
     )
 
     matches.forEach(k=>{
@@ -236,6 +240,7 @@
     }
 
     document.addEventListener("mousemove",e=>{
+    const glow=document.getElementById("glow")
     glow.style.left=e.clientX+"px"
     glow.style.top=e.clientY+"px"
     })
