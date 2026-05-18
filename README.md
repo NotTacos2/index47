@@ -11,6 +11,11 @@ definitions, or acronyms. This website simply solves all of these problems!
 4. Wait for approval from developer
 5. If embedding links, use this format
  <img width="373" height="13" alt="Screenshot 2026-05-18 2 08 57 PM" src="https://github.com/user-attachments/assets/a60b0573-42d4-414f-b3e8-c71dbc5e5c69" />
+
+
+
+
+ 
    ### **Contribute to Existing search, UI, or micellanous**
              1. Make sure all general contributing steps are completed above
              2. Fork Index47
