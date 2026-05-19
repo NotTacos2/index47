@@ -20,7 +20,8 @@ definitions, or acronyms. This website simply solves all of these problems!
              1. Make sure all general contributing steps are completed above
              2. Fork Index47
              3. Make the changes that you got approval for
-             4. Create a pull request to main
+             4. Add your name in contributors.html, in the same format
+             5. Create a pull request to main
    ### **Contribute to New search (Watch video below to summarize)**
              1. Make sure all general contributing steps are completed above
              2. Fork Index47
@@ -29,7 +30,8 @@ definitions, or acronyms. This website simply solves all of these problems!
              5. Paste the file into a new file under docs folder, named [acronym if any or full form].html,
              6. Go through all the written comments and adapt them to your search including images and url embeds
              7. Go to index.html inside the docs folder, at line 62, add your search to the list as shown
-             8. Create a pull request to main
+             8. Add your name in contributors.html, in the same format
+             9. Create a pull request to main
 https://github.com/user-attachments/assets/e9083a9b-de35-41aa-8cfe-98a61b04b3f6
 
 
