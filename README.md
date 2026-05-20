@@ -6,7 +6,7 @@ definitions, or acronyms. This website simply solves all of these problems!
 
 # CONTRIBUTING
 1. Join the <a href="https://discord.gg/dAJUWgdun2" target="_blank">discord</a>
-2. Send a message in #suggestion-addtions about what contribution you are making, use example
+2. Send a post in #suggestion-addtions about what contribution you are making, use example
 3. Follow steps below for contributing on an existing search or making a new search
 4. Wait for approval from developer
 5. If embedding links, use this format, example: (LINK: www.youtube.com/watch?v=dQw4w9WgXcQ, LINK COVER: youtube)
