@@ -16,9 +16,10 @@
 <div class="glow" id="glow"></div>
 
 <div class="top">
-        <button class="btn btn-text" onclick="openCredits()">Contributors</button>
+        <button class="btn btn-text" onclick="openCredits()">Developers</button>
+        <button class="btn btn-text" onclick="openTOC()">Table of Contents</button>
 
-  <a class="btn btn-text" href="https://github.com/index-47/index47" target="_blank">
+  <a class="btn btn-text" href="https://github.com/index47ftc/index47" target="_blank">
         GitHub
     </a>
     <a class="btn btn-text" href="https://discord.gg/dAJUWgdun2" target="_blank">
@@ -41,7 +42,7 @@
 
     <h1>INDEX47</h1>
 
-    <p>Your FTC Glossary by Team 13100</p>
+    <p>Your FTC Glossary founded by Team 13100</p>
 
     <div class="search">
 
@@ -57,7 +58,7 @@
         <button class="close" onclick="closeAbout()">✕</button>
         <h2>About Index47</h2>
         <p class="muted">
-            Index47 was started in May of 2026, by programmers on 13100 47 Beavers through observations that people in the FTC community do not know all references. Index47 is now has many more contributors!
+            Index47 was founded in May of 2026, by programmers on 13100, but now many more contribute. It was made through observations that the FTC community does not know all niche references. 
         </p>
 
         <hr class="credits-divider">
@@ -76,16 +77,50 @@
                 <span class="contributor-role">Lead Developer</span>
             </div>
             <div class="contributor">
-                <span class="contributor-name">Ishika Last name</span>
-                <span class="contributor-role">Frontend Developer</span>
+                <span class="contributor-name">Ishika Saini</span>
+                <span class="contributor-role">Design Lead</span>
             </div>
             <div class="contributor">
                 <span class="contributor-name">Mohit Patil</span>
-                <span class="contributor-role">Backend Developer</span>
+                <span class="contributor-role">Collaboration Lead</span>
+            </div>
+            <div class="contributor">
+                <span class="contributor-name">Davis Luxenberg</span>
+                <span class="contributor-role">Beta Testing Lead</span>
             </div>
              <div class="contributor">
-                <span class="highlight" class="contributor-name"><a href="https://index4-7.github.io/index47/contributors.html">Contributors that helped Index47!</a></span>
+                <span class="highlight" class="contributor-name"><a href="https://index47ftc.github.io/index47/contributors.html">Contributors that made Index47 possible!</a></span>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="toc">
+    <div class="about-box">
+        <button class="close" onclick="closeTOC()">✕</button>
+        <h2>Table of Contents</h2>
+        <div class="toc-list" style="margin-top:14px">
+            <div class="toc-item"><a href="apex.html">"Apex Pathing"</a></div>
+            <div class="toc-item"><a href="AS.html">"Android Studio"</a></div>
+            <div class="toc-item"><a href="cad.html">"Computer Aided Design"</a></div>
+            <div class="toc-item"><a href="cs.html">"Centerstage"</a></div>
+            <div class="toc-item"><a href="ff.html">"Feedforward"</a></div>
+            <div class="toc-item"><a href="github.html">"GitHub"</a></div>
+            <div class="toc-item"><a href="gobilda.html">"goBILDA"</a></div>
+            <div class="toc-item"><a href="itd.html">"Into the Deep"</a></div>
+            <div class="toc-item"><a href="larp.html">"Live Action Role Play"</a></div>
+            <div class="toc-item"><a href="lut.html">"Lookup Table"</a></div>
+            <div class="toc-item"><a href="onshape.html">"Onshape"</a></div>
+            <div class="toc-item"><a href="opr.html">"Offensive Power Rating"</a></div>
+            <div class="toc-item"><a href="pid.html">"Proportional Integral Derivative"</a></div>
+            <div class="toc-item"><a href="pp.html">"Pedro Pathing"</a></div>
+            <div class="toc-item"><a href="REV.html">"REV Robotics"</a></div>
+            <div class="toc-item"><a href="ri3d.html">"Robot in 3 days"</a></div>
+            <div class="toc-item"><a href="rr.html">"Road Runner"</a></div>
+            <div class="toc-item"><a href="sotm.html">"Shoot on the move"</a></div>
+            <div class="toc-item"><a href="swerve.html">"Swerve"</a></div>
+            <div class="toc-item"><a href="swyft.html">"Swyft Robotics"</a></div>
+            <div class="toc-item"><a href="ypp.html">"Youth Protection Program"</a></div>
         </div>
     </div>
 </div>
@@ -182,8 +217,20 @@
     document.getElementById("credits").style.display="none"
     }
 
+    function openTOC(){
+    document.getElementById("toc").style.display="flex"
+    }
+
+    function closeTOC(){
+    document.getElementById("toc").style.display="none"
+    }
+
     document.addEventListener("keydown",e=>{
-        if(e.key==="Escape")closeAbout()
+        if(e.key==="Escape"){
+            closeAbout()
+            closeCredits()
+            closeTOC()
+        }
     })
 
     document.addEventListener("mousemove",e=>{
