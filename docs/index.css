@@ -59,7 +59,6 @@ body.light .glow {
     background: radial-gradient(circle, rgba(59,130,246,.04), transparent 70%);
 }
 
-/* ── Top bar ── */
 .top {
     position: fixed;
     top: 0; right: 0;
@@ -117,7 +116,6 @@ body.light .btn:hover {
 
 .btn:hover img { opacity: 1; }
 
-/* ── Text buttons (no styling) ── */
 .btn-text {
     width: auto;
     height: auto;
@@ -152,7 +150,6 @@ body.light .btn-text:hover {
     box-shadow: none;
 }
 
-/* ── Main ── */
 .container {
     position: relative;
     z-index: 2;
@@ -185,7 +182,6 @@ p {
     color: var(--muted);
 }
 
-/* ── Search ── */
 .search {
     position: relative;
     margin-top: 28px;
@@ -223,7 +219,6 @@ input:focus { border-color: var(--accent); }
 
 .search:focus-within .search-icon { color: var(--accent); }
 
-/* ── Suggestions ── */
 .suggestions {
     position: absolute;
     top: calc(100% + 6px);
@@ -278,7 +273,6 @@ body.light .suggestions {
     color: var(--muted);
 }
 
-/* ── About / Credits / TOC modals ── */
 #about, #credits, #toc {
     display: none;
     position: fixed;
@@ -354,7 +348,6 @@ body.light .about-box {
 
 .close:hover { color: var(--text); }
 
-/* ── How to use list ── */
 .how-list {
     list-style: none;
     display: flex;
@@ -441,7 +434,6 @@ body.light .about-box {
     letter-spacing: .5px;
 }
 
-/* ── Table of Contents ── */
 .toc-list {
     display: flex;
     flex-direction: column;
